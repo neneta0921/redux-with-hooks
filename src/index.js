@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from 'store';
+
 import './index.css';
-import App from './App';
+import TodoApp from './TodoApp';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider>
+      <TodoApp />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
